@@ -1,1 +1,33 @@
+.App{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  flex-direction: column;
+}
 
+.click-btn {
+  color: #fff;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: #4338ca;
+  box-shadow: rgb(0 0 0 / 24%) 0px 4px 9px;;
+  border: none;
+}
+
+.count-display {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.table-row{
+  margin: 1rem;
+}
+
+.table-header{
+  padding: 2rem;
+}
+
+.table-data{
+  padding: 1rem 2rem;
+}

@@ -15,7 +15,7 @@ function App() {
     localStorage.setItem("countryClicks", JSON.stringify(countryClicks));
   }, [clickCount, countryClicks]);
 
-  const handleClick = async () => {
+  const clickHandler = async () => {
     setClickCount(clickCount + 1);
 
     try {
@@ -41,11 +41,20 @@ function App() {
     }
   };
   
+  const resetHandler = () => {
+    setClickCount(0);
+    setCountryClicks([]);
+    localStorage.removeItem("clickCount");
+    localStorage.removeItem("countryClicks");
+  };
 
   return (
     <div className="App">
       <h1>Click Counter</h1>
-      <button onClick={handleClick} className='click-btn'>Click Me!</button>
+      <div className='btn-cta'>
+      <button onClick={clickHandler} className='click-btn'>Click Me!</button>
+      <button onClick={resetHandler} className='reset-btn'>Reset</button>
+      </div>
       <p className='count-display'>Click Count: {clickCount}</p>
       <table className="table">
         <thead>
